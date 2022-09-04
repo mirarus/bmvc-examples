@@ -4,7 +4,7 @@
 <?php echo getViewContent(); ?>
 <br><br>
 <hr>
-<a href="bmvc-auth.zip">bmvc-auth.zip</a>
+<a href="bmvc-auth.zip">bmvc-auth.zip</a> | <a href="https://github.com/mirarus/bmvc-examples/tree/main/auth">github/bmvc-auth</a>
 <br>
 
 <!-- START: Scripts -->
