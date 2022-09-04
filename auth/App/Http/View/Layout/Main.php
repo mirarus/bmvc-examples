@@ -1,6 +1,16 @@
 <?php require '_meta.php'; ?>
 </head>
 <body>
+User Dashboard
+<br>
+<hr>
+<?php if (auth_check()) { ?>
+  <?php echo auth_get('name'); ?> | @<?php echo auth_get('username'); ?> | <?php echo auth_get('email'); ?> | <a
+    href="./">Home</a> | <a href="account">Account</a> | <a
+    href="logout">Logout</a><?php echo is_admin() ? ' | <a href="admin">Admin Dashboard</a>' : null; ?>
+  <br>
+  <hr>
+<?php } ?>
 <?php echo getViewContent(); ?>
 <br><br>
 <hr>

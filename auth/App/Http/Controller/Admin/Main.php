@@ -16,7 +16,7 @@ class Main
   {
     View::load("index", [
       'theme' => 'admin',
-      'title' => "Home"
+      'title' => "Dashboard"
     ], true);
   }
 }

@@ -18,7 +18,7 @@ class Auth
    */
   private $user_whitelist = [
     'logout',
-    'auth'
+    'account'
   ];
 
   /**
@@ -26,7 +26,7 @@ class Auth
    */
   private $admin_whitelist = [
     'logout',
-    'auth',
+    'account',
     'admin'
   ];
 

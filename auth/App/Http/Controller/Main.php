@@ -14,8 +14,8 @@ class Main
    */
   public function index()
   {
-    View::load("index", [
-      'title' => auth_check() ? sprintf("Account @%s", auth_get('username')) : 'Dashboard',
+    View::load((auth_check() ? 'index' : 'auth'), [
+      'title' => auth_check() ? 'Dashboard' : 'Auth',
     ], true);
   }
 }
