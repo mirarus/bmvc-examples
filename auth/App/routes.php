@@ -20,8 +20,12 @@ Route::middleware('Auth')->group(function () {
     });
   });
 
+  Route::prefix('account')->group(function () {
+    Route::get(null, ['Account', 'index']);
+    Route::post('edit', ['Account', '_post_edit']);
+  });
+
   Route::get('logout', ['Auth', 'logout']);
   Route::post('auth/signin', ['Auth', '_post_signin']);
   Route::post('auth/signup', ['Auth', '_post_signup']);
-  Route::post('auth/change', ['Auth', '_post_change']);
 });
