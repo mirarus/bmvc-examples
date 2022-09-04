@@ -72,17 +72,19 @@ class Auth
     $status = false;
     $result = null;
 
+    $name = Request::post('name');
     $username = Request::post('username');
     $email = Request::post('email');
     $password = Request::post('password');
 
-    if (Validate::check($username) && Validate::check($email) && Validate::check($password)) {
+    if (Validate::check($name) && Validate::check($username) && Validate::check($email) && Validate::check($password)) {
       if (Validate::email($email)) {
 
         if (!(new User)->get('username', $username)) {
           if (!(new User)->get('email', $email)) {
 
             $_add = (new User)->add([
+              'name' => $name,
               'username' => $username,
               'email' => $email,
               'password' => Hash::make($password),

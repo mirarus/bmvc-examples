@@ -26,7 +26,7 @@ Admin Dashboard
         success: res => {
           if (res && typeof res === 'object') {
             alert(res.message);
-            if (res.status) window.setTimeout(() => (window.location.href = 'admin/users'), 1000);
+            if (res.status) window.setTimeout(() => (window.location.href = "<?= url() ?>" + 'admin/users'), 1000);
           }
         }
       });
@@ -40,7 +40,7 @@ Admin Dashboard
         success: res => {
           if (res && typeof res === 'object') {
             alert(res.message);
-            if (res.status) window.setTimeout(() => (window.location.href = 'admin/users'), 1000);
+            if (res.status) window.setTimeout(() => (window.location.href = "<?= url() ?>" + 'admin/users'), 1000);
           }
         }
       });
