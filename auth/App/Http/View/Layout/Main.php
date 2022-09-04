@@ -50,7 +50,7 @@ User Dashboard
     });
     $("#account_form").submit(e => {
       $.ajax({
-        url: "auth/change",
+        url: "account/edit",
         type: "POST",
         dataType: 'json',
         data: $(e.target).serialize(),
