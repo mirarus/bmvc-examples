@@ -20,3 +20,11 @@
       padding: 10px;
     }
   </style>
+  <script>
+    $.ajaxSetup({
+      beforeSend: (xhr, options) => {
+        options.url = ((/(?:https?):\/\/(\w+:?\w*)?(\S+)(:\d+)?(\/|\/([\w#!:.?+=&%!\-\/]))?/.test(options.url)) ? options.url : "<?= url() ?>" + options.url);
+      },
+      error: (jqXHR, textStatus, errorThrown) => console.log(textStatus + ": " + jqXHR.status + " " + errorThrown)
+    });
+  </script>
