@@ -7,7 +7,7 @@
   ],
   "require": {
     "php": "~7.3.0",
-    "mirarus/bmvc-core": "1.86",
+    "mirarus/bmvc-core": "1.87",
     "mirarus/bmvc-libs": "0.*",
     "ext-intl": "*",
     "ext-json": "*",
